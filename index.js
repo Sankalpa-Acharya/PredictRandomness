@@ -9,6 +9,10 @@ app.get('/',(req,res)=>{
     res.render('index',{numbers:randomness.slice(0,4),data:crypto.encryptDataWithPassword('<your solution>',String(randomness[4]))})
 })
 
+app.get('/greet',(req,res)=>{
+    res.send('this is test route')
+})
+
 app.listen(3002,()=>{
     console.log('Listening at port 3002')
 })
